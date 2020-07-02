@@ -16,13 +16,25 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var planetTitle: UILabel!
     
+    @IBOutlet weak var longDescription: UILabel!
     
-
+    @IBOutlet weak var distanceLabel: UILabel!
+    
+    @IBOutlet weak var funFactLabel: UILabel!
+    @IBOutlet weak var yearLengthLabel: UILabel!
+    @IBOutlet weak var diameterLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    //planetImage.image = planet.image
-    //planetTitle.text = planet.name
+    planetImage.image = planet.image
+        planetTitle.text = planet.name
+        longDescription.text = planet.longDescription
+        distanceLabel.text = String(format:"%f", planet.distFromSun!)
+        funFactLabel.text = planet.funFact
+        yearLengthLabel.text = String(format:"%f", planet.lengthOfYear!)
+        diameterLabel.text = String(format:"%f", planet.diameter!)
+        
+        
         
         
         
@@ -36,7 +48,9 @@ class DetailViewController: UIViewController {
        
     }
     
-
+    @IBAction func learnMoreButtonPressed(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -38,7 +38,7 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     tableView.deselectRow(at: indexPath, animated: true)
     planetToSend = globalPlanets[indexPath.row]
 
-    performSegue(withIdentifier: "segueToDetail", sender: cell)
+    performSegue(withIdentifier: "detailSegway", sender: cell)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -66,6 +66,9 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
         globalPlanets.append(earth)
         globalPlanets.append(mars)
         globalPlanets.append(pluto)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
 
