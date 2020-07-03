@@ -15,36 +15,37 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     var planetToSend : Planet!
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   let cell = tableView.dequeueReusableCell(withIdentifier: "TableCellID", for: indexPath) as! TableViewCell
     
-    let item = globalPlanets[indexPath.row]
-    cell.planetName?.text = item.name
-    cell.planetDescription.text = item.shortDescription
-    cell.planetImage.image = item.image
-    return cell
-    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCellID", for: indexPath) as! TableViewCell
+        let item = globalPlanets[indexPath.row]
+        cell.planetName?.text = item.name
+        cell.planetDescription.text = item.shortDescription
+        cell.planetImage.image = item.image
+        return cell
     
    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+        return globalPlanets.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    tableView.rowHeight = 200
-    return 200
+        tableView.rowHeight = 200
+        return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let cell = tableView.cellForRow(at: indexPath)
-    tableView.deselectRow(at: indexPath, animated: true)
-    planetToSend = globalPlanets[indexPath.row]
-
-    performSegue(withIdentifier: "detailSegway", sender: cell)
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        planetToSend = globalPlanets[indexPath.row]
+        performSegue(withIdentifier: "detailSegway", sender: cell)
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-    let newViewController = segue.destination as! DetailViewController
+        let newViewController = segue.destination as! DetailViewController
         
-    newViewController.planet = planetToSend
+        newViewController.planet = planetToSend
         
     }
     

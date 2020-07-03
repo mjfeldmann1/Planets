@@ -9,6 +9,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+
     @IBOutlet weak var planetImage: UIImageView!
     
     @IBOutlet weak var planetName: UILabel!

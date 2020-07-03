@@ -26,26 +26,14 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    planetImage.image = planet.image
+        planetImage.image = planet.image
         planetTitle.text = planet.name
         longDescription.text = planet.longDescription
-        distanceLabel.text = String(format:"%f", planet.distFromSun!)
+        distanceLabel.text = String(format:"%.1f", planet.distFromSun!)
         funFactLabel.text = planet.funFact
-        yearLengthLabel.text = String(format:"%f", planet.lengthOfYear!)
-        diameterLabel.text = String(format:"%f", planet.diameter!)
+        yearLengthLabel.text = String(format:"%.1f", planet.lengthOfYear!)
+        diameterLabel.text = String(format:"%.1f", planet.diameter!)
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
     }
     
     @IBAction func learnMoreButtonPressed(_ sender: Any) {

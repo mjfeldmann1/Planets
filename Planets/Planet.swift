@@ -39,6 +39,7 @@ class Planet {
         self.funFact = fact
         self.longDescription = longDesc
         self.link = webLink
+
     }
     
 }

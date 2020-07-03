@@ -110,7 +110,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="x12-XR-SEX" id="vKI-dy-haG"/>
-                        <segue destination="sGq-rB-vpu" kind="show" identifier="detailSegway" id="Xtp-QU-sUQ"/>
+                        <segue destination="sGq-rB-vpu" kind="show" identifier="detailSegway" id="vB3-kh-yn6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -125,7 +125,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8KZ-Go-UC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1327" y="-611"/>
+            <point key="canvasLocation" x="1457" y="-611"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -174,7 +174,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Planet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-Kj-w1Q">
-                                                    <rect key="frame" x="42" y="148" width="117" height="45"/>
+                                                    <rect key="frame" x="42" y="148" width="117.5" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Xih-m5-YyX"/>
                                                         <constraint firstAttribute="height" constant="45" id="cqG-gm-clY"/>

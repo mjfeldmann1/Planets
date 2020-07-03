@@ -25,6 +25,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return globalPlanets.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
        return CGSize(width: 200, height: 200)
@@ -42,7 +43,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         let cell = planetCollectionView.cellForItem(at: indexPath)
         collectionView.deselectItem(at: indexPath, animated: true)
         planetToSend = globalPlanets[indexPath.row]
-        
         performSegue(withIdentifier: "detailSegue", sender: cell)
     }
     
